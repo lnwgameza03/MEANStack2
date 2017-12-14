@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { RouterModule, Routes } from "@angular/router";
-import { HttpModule } from '@angular/http'
+
 
 import { AuthguardGuard } from './authguard.guard'
 import { LoginService } from "./services/login.service";
@@ -14,6 +14,8 @@ import { LoginComponent } from './components/login/login.component';
 import { CategoryComponent } from './components/category/category.component';
 import { PostComponent } from './components/post/post.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 const appRoutes:Routes = [
   {path: '',component: HomeComponent},
@@ -34,8 +36,9 @@ const appRoutes:Routes = [
   ],
   imports: [
     BrowserModule,
-    HttpModule,
-    RouterModule.forRoot(appRoutes)
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes),
+    FormsModule
   ],
   providers: [
     AuthguardGuard,
