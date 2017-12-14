@@ -1,7 +1,7 @@
 <h1>
   <div class="form-group">
     <label for="usr">ระบุคำถามของคุณ เช่น เว็บ Pantip.com ก่อตั้งขึ้นตั้งแต่เมื่อไหร่ ใครพอทราบบ้าง?</label>
-    <input type="text" class="form-control" id="usr">
+    <input type="text" [(ngModel)]="post1.topic" class="form-control" id="topic">
   </div>
   <div class="dropdown">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -18,9 +18,9 @@
     </div>
   <div class="form-group">
     <label for="comment">เขียนรายละเอียดของคำถาม</label>
-    <textarea class="form-control" rows="5" id="comment"></textarea>
+    <textarea [(ngModel)]="post1.content" class="form-control" rows="5" id="content"></textarea>
   </div>
   <div class="text-center">
-    <button type="button" class="btn btn-outline-primary" (click)="login()">ส่งกระทู้</button>
+    <button type="button" class="btn btn-outline-primary" (click)="post()">ส่งกระทู้</button>
   </div>
 </h1>
