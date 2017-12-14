@@ -1,4 +1,10 @@
 export class User{ 
-    name:  String ;
-    age: Number ;
+    userName:  String;
+    password: String;
+    firstName:  String;
+    lastName: String;
+    DOB:  String;
+    phone: String;
+    email:  String;
+    status: Number;
 }

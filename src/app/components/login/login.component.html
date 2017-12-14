@@ -1,18 +1,15 @@
-<<<<<<< HEAD
 <h1>
   กรุณาเข้าสู่ระบบ
 </h1>
-=======
->>>>>>> 2ddc4f2b2a2c9160c188d2c899ef77aac6e796ae
 <form>
     <div class="form-group">
       <label for="usr">ชื่อผู้ใช้:</label>
-      <input type="text" [(ngModel)]="user.name" class="form-control" id="usr" name = "usr">
+      <input type="text" [(ngModel)]="user.userName" class="form-control" id="usr" name = "usr">
     </div>
     <div class="form-group">
       <label for="pwd">รหัสผ่าน:</label>
       <input type="password" class="form-control" id="pwd">
     </div>
-    <button type="button" class="btn btn-default" (click)="login()">เข้าสู่ระบบ</button>
+    <button type="button" class="btn btn-default" (click)="login()" routerLink="../">เข้าสู่ระบบ</button>
     <a routerLink="../register">ยังไม่ได้เป็นสมาชิก</a>
 </form>

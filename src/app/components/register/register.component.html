@@ -1,31 +1,31 @@
 <form>
     <div class="form-group">
       <label for="usr">ชื่อผู้ใช้:</label>
-      <input type="text" class="form-control" id="usr">
+      <input type="text" [(ngModel)]="user.userName" class="form-control" id="usr">
     </div>
     <div class="form-group">
       <label for="pwd">รหัสผ่าน:</label>
-      <input type="password" class="form-control" id="pwd">
+      <input type="password" [(ngModel)]="user.password" class="form-control" id="pwd">
     </div>
     <div class="form-group">
       <label for="pwd">ชื่อ:</label>
-      <input type="text" class="form-control" id="pwd">
+      <input type="text" [(ngModel)]="user.firstName" class="form-control" id="fn">
     </div>
     <div class="form-group">
       <label for="pwd">นามสกุล:</label>
-      <input type="text" class="form-control" id="pwd">
+      <input type="text" [(ngModel)]="user.lastName" class="form-control" id="ln">
     </div>
     <div class="form-group">
       <label for="pwd">วันเดือนปีเกิด:</label>
-      <input type="date" class="form-control" id="pwd">
+      <input type="date" [(ngModel)]="user.DOB" class="form-control" id="date">
     </div>
     <div class="form-group">
       <label for="pwd">เบอร์โทรศัพท์:</label>
-      <input type="number" class="form-control" id="pwd">
+      <input type="number" [(ngModel)]="user.phone" class="form-control" id="phone">
     </div>
     <div class="form-group">
       <label for="pwd">อีเมล:</label>
-      <input type="email" class="form-control" id="pwd">
+      <input type="email" [(ngModel)]="user.email" class="form-control" id="email">
     </div>
-    <button type="submit" class="btn btn-default" (click)="login()">สมัครสมาชิก</button>
+    <button type="button" class="btn btn-default" (click)="saveRegist()" routerLink="../login">สมัครสมาชิก</button>
 </form>
