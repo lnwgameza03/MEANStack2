@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { RouterModule, Routes } from "@angular/router";
-
 
 import { AuthguardGuard } from './authguard.guard'
 import { AuthguardGuard2 } from './authguard2.guard'
@@ -17,7 +17,6 @@ import { PostComponent } from './components/post/post.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
 
 const appRoutes:Routes = [
   {path: '',component: HomeComponent},

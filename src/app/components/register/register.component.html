@@ -1,31 +1,42 @@
-<form>
-    <div class="form-group">
+<div class="container-fluid">
+  <h1>สมัครสมาชิก</h1>
+
+  <div class="row">
+    <div class="form-group col-md-6">
       <label for="usr">ชื่อผู้ใช้:</label>
       <input type="text" [(ngModel)]="user.userName" class="form-control" id="usr">
     </div>
-    <div class="form-group">
+    <div class="form-group col-md-6">
       <label for="pwd">รหัสผ่าน:</label>
       <input type="password" [(ngModel)]="user.password" class="form-control" id="pwd">
     </div>
-    <div class="form-group">
+  </div>
+
+  <div class="row">
+    <div class="form-group col-md-6">
       <label for="pwd">ชื่อ:</label>
       <input type="text" [(ngModel)]="user.firstName" class="form-control" id="fn">
     </div>
-    <div class="form-group">
+    <div class="form-group col-md-6">
       <label for="pwd">นามสกุล:</label>
       <input type="text" [(ngModel)]="user.lastName" class="form-control" id="ln">
     </div>
-    <div class="form-group">
+  </div>
+
+  <div class="row">
+    <div class="form-group col-md-6">
       <label for="pwd">วันเดือนปีเกิด:</label>
       <input type="date" [(ngModel)]="user.DOB" class="form-control" id="date">
     </div>
-    <div class="form-group">
+    <div class="form-group col-md-6">
       <label for="pwd">เบอร์โทรศัพท์:</label>
       <input type="number" [(ngModel)]="user.phone" class="form-control" id="phone">
     </div>
-    <div class="form-group">
+  </div>
+
+  <div class="row">
+    <div class="form-group col-md-6">
       <label for="pwd">อีเมล:</label>
       <input type="email" [(ngModel)]="user.email" class="form-control" id="email">
     </div>
     <button type="button" class="btn btn-default" (click)="saveRegist()" routerLink="../login">สมัครสมาชิก</button>
-</form>
