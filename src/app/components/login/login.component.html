@@ -6,14 +6,14 @@
         <div class="row">
             <div class="form-group col-md-6">
                 <label for="usr">ชื่อผู้ใช้:</label>
-                <input type="text" [(ngModel)]="user.name" class="form-control" id="usr" name="usr">
+                <input type="text" [(ngModel)]="user.userName" class="form-control" id="usr" name="usr">
             </div>
             <div class="form-group col-md-6">
                 <label for="pwd">รหัสผ่าน:</label>
                 <input type="password" class="form-control" id="pwd">
             </div>
         </div>
-        <button type="button" class="btn btn-default" (click)="login()">เข้าสู่ระบบ</button>
+        <button type="button" class="btn btn-default" (click)="login()" routerLink="../">เข้าสู่ระบบ</button>
         <a routerLink="../register">ยังไม่ได้เป็นสมาชิก</a>
     </form>
 </div>
