@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <div class="card">
+    <div class="card w-75">*ngFor="let user of users"
+      <div class="card-block">
+        <h3 class="card-title">user.userName</h3>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">อ่านเพิ่มเติม..</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card w-75">*ngFor="let user of users"
+      <div class="card-block">
+        <h3 class="card-title">user.userName</h3>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">อ่านเพิ่มเติม..</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="comment">เขียนรายละเอียดของกระทู้</label>
+    <textarea class="form-control" rows="5" id="comment"></textarea>
+  </div>
+  <div class="text-center">
+    <button type="button" class="btn btn-outline-primary" (click)="test()">ตั้งกระทู้</button>
+  </div>
+</div>

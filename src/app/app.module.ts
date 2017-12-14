@@ -17,13 +17,19 @@ import { PostComponent } from './components/post/post.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TopicComponent } from './components/topic/topic.component';
+import { SelectedComponent } from './components/selected/selected.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 const appRoutes:Routes = [
   {path: '',component: HomeComponent},
   {path: 'category',component: CategoryComponent},
   {path: 'post',canActivate: [AuthguardGuard],component: PostComponent},
   {path: 'login',canActivate: [AuthguardGuard2],component: LoginComponent},
-  {path: 'register',canActivate: [AuthguardGuard2],component: RegisterComponent}
+  {path: 'register',canActivate: [AuthguardGuard2],component: RegisterComponent},
+  {path: 'topic',component: TopicComponent},
+  {path: 'selected',component: SelectedComponent},
+  {path: 'profile',component: ProfileComponent}
 ]
   
 @NgModule({
@@ -35,7 +41,10 @@ const appRoutes:Routes = [
     CategoryComponent,
     PostComponent,
     FooterComponent,
-    RegisterComponent
+    RegisterComponent,
+    TopicComponent,
+    SelectedComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
