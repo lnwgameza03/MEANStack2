@@ -1,11 +1,9 @@
 <div id="demo" class="carousel slide" data-ride="carousel">
-
 	<!-- Indicators -->
 	<ul class="carousel-indicators">
 		<li data-target="#demo" data-slide-to="0" class="active"></li>
 		<li data-target="#demo" data-slide-to="1"></li>
 	</ul>
-
 	<!-- The slideshow -->
 	<div class="carousel-inner">
 		<div class="carousel-item active">
@@ -15,7 +13,6 @@
 			<img src="https://coverfiles.alphacoders.com/177/17725.jpg">
 		</div>
 	</div>
-
 	<!-- Left and right controls -->
 	<a class="carousel-control-prev" href="#demo" data-slide="prev">
 		<span class="carousel-control-prev-icon"></span>
@@ -27,23 +24,24 @@
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 	<!-- Brand/logo -->
-	<a class="navbar-brand" routerLink="../">หน้าแรก</a>
-
+	<a class="navbar-brand col-md-2" routerLink="../">หน้าแรก</a>
 	<!-- Links -->
-	<ul class="navbar-nav">
-		<li class="nav-item">
+	<ul class="navbar-nav col-md-10">
+		<li class="nav-item col-md-2">
 			<a class="nav-link" routerLink="../category">หมวดหมู่</a>
 		</li>
-		<li class="nav-item" (click)="post()">
+		<li class="nav-item col-md-2" (click)="post()">
 			<a class="nav-link" routerLink="../post">ตั้งกระทู้</a>
 		</li>
-		<li class="nav-item" *ngIf="!isLogin()">
+		<div class="col-md-4"></div>
+		<li class="nav-item col-md-2" *ngIf="!isLogin()">
 			<a class="nav-link" routerLink="../login">เข้าสู่ระบบ</a>
 		</li>
-		<li class="nav-item" *ngIf="!isLogin()">
+		<li class="nav-item col-md-2" *ngIf="!isLogin()">
 			<a class="nav-link" routerLink="../register">สมัครสมาชิก</a>
 		</li>
-		<li class="nav-item" *ngIf="isLogin()" (click)="logout()">
+		<div class="col-md-2"></div>
+		<li class="nav-item col-md-2" *ngIf="isLogin()" (click)="logout()">
 			<a class="nav-link" routerLink="../">ออกจากระบบ</a>
 		</li>
 	</ul>
