@@ -5,6 +5,7 @@ import { RouterModule, Routes } from "@angular/router";
 
 
 import { AuthguardGuard } from './authguard.guard'
+import { AuthguardGuard2 } from './authguard2.guard'
 import { LoginService } from "./services/login.service";
 
 import { AppComponent } from './app.component';
@@ -14,14 +15,16 @@ import { LoginComponent } from './components/login/login.component';
 import { CategoryComponent } from './components/category/category.component';
 import { PostComponent } from './components/post/post.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { RegisterComponent } from './components/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 const appRoutes:Routes = [
   {path: '',component: HomeComponent},
   {path: 'category',component: CategoryComponent},
-  {path: 'login',component: LoginComponent},
-  {path: 'post',canActivate: [AuthguardGuard],component: PostComponent}
+  {path: 'post',canActivate: [AuthguardGuard],component: PostComponent},
+  {path: 'login',canActivate: [AuthguardGuard2],component: LoginComponent},
+  {path: 'register',canActivate: [AuthguardGuard2],component: RegisterComponent}
 ]
   
 @NgModule({
@@ -32,7 +35,8 @@ const appRoutes:Routes = [
     LoginComponent,
     CategoryComponent,
     PostComponent,
-    FooterComponent
+    FooterComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +46,7 @@ const appRoutes:Routes = [
   ],
   providers: [
     AuthguardGuard,
+    AuthguardGuard2,
     LoginService
   ],
   bootstrap: [AppComponent],
