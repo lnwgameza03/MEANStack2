@@ -18,6 +18,10 @@ export class HeaderComponent implements OnInit {
     return this.loginService.isLogin()
   }
 
+  post(){
+
+  }
+  
   logout(){
     this.loginService.logout()
   }

@@ -12,4 +12,8 @@ export class PostComponent implements OnInit {
   ngOnInit() {
   }
 
+  login(){
+    
+  }
+
 }
