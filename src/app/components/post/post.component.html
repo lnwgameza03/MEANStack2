@@ -1,7 +1,12 @@
 <h1>
   <div class="form-group">
+<<<<<<< HEAD
     <label for="usr">หัวข้อกระทู้</label>
     <input type="text" class="form-control" id="usr">
+=======
+    <label for="usr">ระบุคำถามของคุณ เช่น เว็บ Pantip.com ก่อตั้งขึ้นตั้งแต่เมื่อไหร่ ใครพอทราบบ้าง?</label>
+    <input type="text" [(ngModel)]="post1.topic" class="form-control" id="topic">
+>>>>>>> 2eeb9ecca55e9864f1809706e1752b76dfe5939a
   </div>
   <div class="dropdown">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -18,10 +23,18 @@
       </div>
     </div>
   <div class="form-group">
+<<<<<<< HEAD
     <label for="comment">เขียนรายละเอียดของกระทู้</label>
     <textarea class="form-control" rows="5" id="comment"></textarea>
   </div>
   <div class="text-center">
     <button type="button" class="btn btn-outline-primary" (click)="login()">ตั้งกระทู้</button>
+=======
+    <label for="comment">เขียนรายละเอียดของคำถาม</label>
+    <textarea [(ngModel)]="post1.content" class="form-control" rows="5" id="content"></textarea>
+  </div>
+  <div class="text-center">
+    <button type="button" class="btn btn-outline-primary" (click)="post()">ส่งกระทู้</button>
+>>>>>>> 2eeb9ecca55e9864f1809706e1752b76dfe5939a
   </div>
 </h1>

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core'
 import { User } from '../models/user.model';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
+import { Post } from '../models/post.models';
 
 
 
@@ -16,6 +17,10 @@ export class UserService {
 
     Create(user:User) : Observable<User>{
     return this.http.post<User>("http://localhost:9990/users" , user)
+  }
+
+    CreatePost(post:Post) : Observable<Post>{
+    return this.http.post<Post>("http://localhost:9990/posts" , post)
   }
 
   getUsers() : Observable<User[]>{
