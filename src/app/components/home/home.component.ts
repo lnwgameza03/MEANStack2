@@ -13,12 +13,14 @@ import { User } from '../../models/user.model';
 export class HomeComponent implements OnInit {
 
  users: User[] = [];
+ //users: User
  
   
   constructor(private loginService:LoginService , private userService:UserService) { }
 
   ngOnInit() {
    this.userService.getUsers().subscribe(users => this.users = users)
+   //this.userService.getUser().subscribe(users => this.users = users)
     
   }
  

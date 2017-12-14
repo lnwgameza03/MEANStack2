@@ -19,8 +19,7 @@ export class PostComponent implements OnInit {
   }
 
   post(){
-    this.post1.topic = ((<HTMLTextAreaElement>document.getElementById('topic')).value)
-    this.post1.content = ((<HTMLTextAreaElement>document.getElementById('content')).value)
+    
     this.userService.CreatePost(this.post1).subscribe(post => (null))
   }
 

@@ -3,8 +3,8 @@ export class User{
     password: String;
     firstName:  String;
     lastName: String;
-    DOB:  String;
-    phone: String;
+    DOB:  Date;
+    phone: Number;
     email:  String;
     status: Number;
 }
