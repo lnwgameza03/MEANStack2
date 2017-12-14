@@ -1,7 +1,7 @@
 <form>
     <div class="form-group">
       <label for="usr">ชื่อผู้ใช้:</label>
-      <input type="text" class="form-control" id="usr">
+      <input type="text" [(ngModel)]="user.name" class="form-control" id="usr" name = "usr">
     </div>
     <div class="form-group">
       <label for="pwd">รหัสผ่าน:</label>
