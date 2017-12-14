@@ -18,6 +18,10 @@ export class UserService {
     return this.http.post<User>("http://localhost:9990/users" , user)
   }
 
+  getUsers() : Observable<User[]>{
+    return this.http.get<User[]>("http://localhost:9990/users")
+  }
+
   
 
 }
