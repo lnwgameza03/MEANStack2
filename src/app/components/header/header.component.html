@@ -61,27 +61,31 @@
 		<a class="nav-link" routerLink="../">ออกจากระบบ</a>
 	  </li>
 	</ul> -->
-	
-	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-			<!-- Brand/logo -->
-			<a class="navbar-brand" routerLink="../">HOME</a>
-			
-			<!-- Links -->
-			<ul class="navbar-nav">
-				<li class="nav-item">
-					<a class="nav-link" routerLink="../">หน้าแรก</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" routerLink="../category">หมวดหมู่</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" routerLink="../login">เข้าสู่ระบบ</a>
-				</li>
-				<li class="nav-item" (click)="post()">
-						<a class="nav-link" routerLink="../post">ตั้งกระทู้</a>
-					</li>
-					<li class="nav-item" *ngIf="isLogin()" (click)="logout()">
-							<a class="nav-link" routerLink="../">ออกจากระบบ</a>
-						</li>
-			</ul>
-		</nav>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+	<!-- Brand/logo -->
+	<a class="navbar-brand" routerLink="../">หน้าแรก</a>
+
+	<!-- Links -->
+	<ul class="navbar-nav">
+		<li class="nav-item">
+			<a class="nav-link" routerLink="../category">หมวดหมู่</a>
+		</li>
+		<li class="nav-item" (click)="post()">
+			<a class="nav-link" routerLink="../post">ตั้งกระทู้</a>
+		</li>
+		<li class="nav-item" *ngIf="!isLogin()">
+			<a class="nav-link" routerLink="../login">เข้าสู่ระบบ</a>
+		</li>
+		<li class="nav-item" *ngIf="isLogin()" (click)="logout()">
+			<a class="nav-link" routerLink="../">ออกจากระบบ</a>
+		</li>
+	</ul>
+</nav>
+ไอดี
+พาสเวิร์ด
+ชื่อ
+นามสกุล
+วดปก
+เบอร์
+อีเมล์
