@@ -24,43 +24,6 @@
 		<span class="carousel-control-next-icon"></span>
 	</a>
 </div>
-<!--<div>
-	<ul class="nav nav-tabs">
-		<li role="presentation">
-			<a routerLink="../">หน้าแรก</a>
-		</li>
-		<li role="presentation">
-			<a routerLink="../category">หมวดหมู่</a>
-		</li>
-		<li role="presentation">
-			<a routerLink="../login">เข้าสู่ระบบ</a>
-		</li>
-		<li role="presentation" (click)="post()">
-			<a routerLink="../post">ตั้งกระทู้</a>
-		</li>
-		<li role="presentation" *ngIf="isLogin()" (click)="logout()">
-			<a routerLink="../">ออกจากระบบ</a>
-		</li>
-	</ul>
-</div> -->
-
-<!--<ul class="nav justify-content-center">
-	<li class="nav-item">
-	  <a class="nav-link active" routerLink="../">หน้าแรก</a>
-	</li>
-	<li class="nav-item">
-	  <a class="nav-link" routerLink="../category">หมวดหมู่</a>
-	</li>
-	<li class="nav-item">
-	  <a class="nav-link" routerLink="../login">เข้าสู่ระบบ</a>
-	</li>
-	<li class="nav-item" (click)="post()">
-	  <a class="nav-link" routerLink="../post">ตั้งกระทู้</a>
-	</li>
-	<li class="nav-item" *ngIf="isLogin()" (click)="logout()">
-		<a class="nav-link" routerLink="../">ออกจากระบบ</a>
-	  </li>
-	</ul> -->
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 	<!-- Brand/logo -->
@@ -76,6 +39,9 @@
 		</li>
 		<li class="nav-item" *ngIf="!isLogin()">
 			<a class="nav-link" routerLink="../login">เข้าสู่ระบบ</a>
+		</li>
+		<li class="nav-item" *ngIf="!isLogin()">
+			<a class="nav-link" routerLink="../register">สมัครสมาชิก</a>
 		</li>
 		<li class="nav-item" *ngIf="isLogin()" (click)="logout()">
 			<a class="nav-link" routerLink="../">ออกจากระบบ</a>

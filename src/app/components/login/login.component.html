@@ -1,14 +1,12 @@
-<h1>
-  เข้ามาทำไมวะสัส
-</h1>
 <form>
     <div class="form-group">
-      <label for="usr">Name:</label>
+      <label for="usr">ชื่อผู้ใช้:</label>
       <input type="text" class="form-control" id="usr">
     </div>
     <div class="form-group">
-      <label for="pwd">Password:</label>
+      <label for="pwd">รหัสผ่าน:</label>
       <input type="password" class="form-control" id="pwd">
     </div>
-    <button type="button" class="btn btn-default" (click)="login()">Submit</button>
+    <button type="button" class="btn btn-default" (click)="login()">เข้าสู่ระบบ</button>
+    <a routerLink="../register">ยังไม่ได้เป็นสมาชิก</a>
 </form>
