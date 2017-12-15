@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
    this.userService.getUsers().subscribe(users => this.users = users)
    //this.userService.getUser().subscribe(users => this.users = users)
 
-    sessionStorage.getItem('name')
+    //sessionStorage.getItem('name')
   }
  
 }

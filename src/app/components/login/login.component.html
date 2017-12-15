@@ -10,7 +10,7 @@
             </div>
             <div class="form-group col-md-6">
                 <label for="pwd">รหัสผ่าน:</label>
-                <input type="password" class="form-control" id="pwd">
+                <input type="password" [(ngModel)]="user.password" class="form-control" id="pwd" name ="pwd">
             </div>
         </div>
         <button type="button" class="btn btn-default" (click)="login()" routerLink="../">เข้าสู่ระบบ</button>
