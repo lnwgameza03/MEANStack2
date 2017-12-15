@@ -3,7 +3,7 @@ import { User } from '../models/user.model';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { Post } from '../models/post.models';
-
+import { Reply } from '../models/reply.models';
 
 
 
@@ -23,6 +23,10 @@ export class UserService {
     return this.http.post<Post>("http://localhost:9990/posts" , post)
   }
 
+  CreateReply(reply:Reply) : Observable<Reply>{
+    return this.http.post<Reply>("http://localhost:9990/replies" , reply)
+  }
+
   getPost() : Observable<Post[]>{
     return this.http.get<Post[]>("http://localhost:9990/posts")
   }
@@ -36,7 +40,7 @@ export class UserService {
   }
 
   getTopic(topic:String) : Observable<Post[]>{
-    return this.http.get<Post[]>("http://localhost:9990/posts/"+topic)
+    return this.http.get<Post[]>("http://localhost:9990/posts/topic/"+topic)
   }
 
   getUser() : Observable<User[]>{
