@@ -3,20 +3,17 @@
     <label for="usr">หัวข้อกระทู้</label>
     <input type="text" [(ngModel)]="post1.topic" class="form-control" id="topic">
   </div>
-  <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        ประเภทกีฬา
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">ฟุตบอล</a>
-        <a class="dropdown-item" href="#">บาสเกตบอล</a>
-        <a class="dropdown-item" href="#">เทเบิลเทนนิส</a>
-        <a class="dropdown-item" href="#">ว่ายน้ำ</a>
-        <a class="dropdown-item" href="#">กอล์ฟ</a>
-        <a class="dropdown-item" href="#">วอลเลย์บอล</a>
-        <a class="dropdown-item" href="#">แบดมินตัน</a>
-      </div>
-    </div>
+  <div class="container">
+  <select class="form-control" [(ngModel)]="post1.category">
+    <option>ฟุตบอล</option>
+    <option>บาสเกตบอล</option>
+    <option>เทเบิลเทนนิส</option>
+    <option>ว่ายน้ำ</option>
+    <option>กอล์ฟ</option>
+    <option>วอลเลย์บอล</option>
+    <option>แบดมินตัน</option>
+  </select>
+  </div>
   <div class="form-group">
     <label for="comment">เขียนรายละเอียดของกระทู้</label>
     <textarea [(ngModel)]="post1.content" class="form-control" rows="5" id="content"></textarea>
