@@ -48,7 +48,9 @@
 		<li class="nav-item col-md-2" *ngIf="!isLogin()">
 			<a class="nav-link" routerLink="../register">สมัครสมาชิก</a>
 		</li>
-		<div class="col-md-2"></div>
+		<li class="nav-item col-md-2" *ngIf="isLogin()">
+			<a class="nav-link" routerLink="../profile">ข้อมูลส่วนตัว</a>
+		</li>
 		<li class="nav-item col-md-2" *ngIf="isLogin()" (click)="logout()">
 			<a class="nav-link" routerLink="../">ออกจากระบบ</a>
 		</li>
