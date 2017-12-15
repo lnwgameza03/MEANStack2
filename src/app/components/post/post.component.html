@@ -20,6 +20,6 @@
     <textarea #content (change)="post1.content=content.value" class="form-control" rows="5" id="content"></textarea>   
   </div>
   <div class="text-center">
-    <button type="button" class="btn btn-outline-primary" (click)="post()">ตั้งกระทู้</button>
+    <button type="button" class="btn btn-outline-primary" (click)="post()" routerLink="../topic">ตั้งกระทู้</button>
   </div>
 </h1>

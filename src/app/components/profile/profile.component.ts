@@ -15,11 +15,7 @@ export class ProfileComponent implements OnInit {
   constructor(private userService: UserService) { }
 
   ngOnInit() {
-<<<<<<< HEAD
-    
-=======
     this.userService.checkUsername(sessionStorage.getItem("name")).subscribe(user => {this.users = user})
->>>>>>> bb77a82953274a3b2aa5143c0cff5f654ce4effa
   }
 
   saveEdit() {
