@@ -14,26 +14,26 @@
 
   </div>
 
-  <div class="card">
-    <!-- *ngFor="let comment of comment" -->
+  <div class="card" >
+    <!-- *ngFor="let reply of reply1" -->
 
     <div class="card-block">
-      <p class="card-text">comment content</p>
+      <p class="card-text">reply.replie </p>
       <!-- {{comment.content }} -->
-      <small>comment detail</small>
+      <!-- <small>{{ user.userName }}</small> -->
       <!-- {{user.userName }} -->
       <!-- {{comment.date }} -->
       <!-- {{comment.time }} -->
     </div>
 
   </div>
-
+  
   <div class="form-group">
     <label for="comment">แสดงความคิดเห็น</label>
-    <textarea class="form-control" rows="5" id="comment"></textarea>
+    <textarea class="form-control" #replie (change)="reply1.replie=replie.value" rows="5" id="comment"></textarea>
     <!-- [(ngModel)]="comment.content" -->
   </div>
   <div class="text-center">
-    <button type="button" class="btn btn-outline-primary" (click)="comment()">ส่งข้อความ</button>
+    <button type="button" class="btn btn-outline-primary" (click)="comment()" routerLink="../topic">ส่งข้อความ</button>
   </div>
 </div>
