@@ -35,6 +35,11 @@ export class UserService {
     return this.http.post<User[]>("http://localhost:9990/users/check",{username,password})
   }
 
-  
+  checkUsername(username : String) : Observable<User[]>{
+    return this.http.post<User[]>("http://localhost:9990/users/checkuser",{username})
+  }
 
+  update(user:User) : Observable<User[]>{
+    return this.http.put<User[]>("http://localhost:9990/users/update",user)
+  }
 }
