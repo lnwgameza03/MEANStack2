@@ -21,7 +21,9 @@ export class PostComponent implements OnInit {
 
   post(){
     console.log(this.post1)
+    this.post1.username = sessionStorage.getItem('name')
     this.userService.CreatePost(this.post1).subscribe(post => (null))
+
   }
 
 }
