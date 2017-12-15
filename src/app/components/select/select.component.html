@@ -1,0 +1,15 @@
+<div class="container-fluid">
+  
+        <div class="card" routerLink="../topic" *ngFor="let post of post1">
+          <!-- *ngFor="let post of post" -->
+          <div class="card-block">
+            <h3 class="card-title">{{post.topic }}</h3>
+            <p class="card-text">{{post.username }}</p>
+            <p class="card-text">{{post.category }}</p>
+            <!-- {{user.userName }} -->
+            <!-- {{psot.date }} -->
+            <!-- {{post.time }} -->
+          </div>
+        </div>
+  </div>
+

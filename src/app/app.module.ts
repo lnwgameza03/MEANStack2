@@ -18,8 +18,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TopicComponent } from './components/topic/topic.component';
-import { SelectedComponent } from './components/selected/selected.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { SelectComponent } from './components/select/select.component';
 
 const appRoutes:Routes = [
   {path: '',component: HomeComponent},
@@ -27,8 +27,8 @@ const appRoutes:Routes = [
   {path: 'post',canActivate: [AuthguardGuard],component: PostComponent},
   {path: 'login',canActivate: [AuthguardGuard2],component: LoginComponent},
   {path: 'register',canActivate: [AuthguardGuard2],component: RegisterComponent},
-  {path: 'topic',component: TopicComponent},
-  {path: 'selected',component: SelectedComponent},
+  {path: 'topic',canActivate: [AuthguardGuard],component: TopicComponent},
+  {path: 'selected',component: SelectComponent},
   {path: 'profile',component: ProfileComponent}
 ]
   
@@ -43,8 +43,8 @@ const appRoutes:Routes = [
     FooterComponent,
     RegisterComponent,
     TopicComponent,
-    SelectedComponent,
-    ProfileComponent
+    ProfileComponent,
+    SelectComponent
   ],
   imports: [
     BrowserModule,
