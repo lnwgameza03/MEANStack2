@@ -2,6 +2,6 @@ export class Post{
 topic: String ;
 content: String;
 category: String;
-date: Date;
-time: String
+username: String
+
 }

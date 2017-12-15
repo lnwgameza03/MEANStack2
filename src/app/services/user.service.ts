@@ -23,6 +23,10 @@ export class UserService {
     return this.http.post<Post>("http://localhost:9990/posts" , post)
   }
 
+  getPost() : Observable<Post[]>{
+    return this.http.get<Post[]>("http://localhost:9990/posts")
+  }
+
   getUsers() : Observable<User[]>{
     return this.http.get<User[]>("http://localhost:9990/users")
   }
@@ -39,12 +43,7 @@ export class UserService {
     return this.http.post<User[]>("http://localhost:9990/users/checkuser",{username})
   }
 
-<<<<<<< HEAD
-  
-
-=======
   update(user:User) : Observable<User[]>{
     return this.http.put<User[]>("http://localhost:9990/users/update",user)
   }
->>>>>>> bb77a82953274a3b2aa5143c0cff5f654ce4effa
 }

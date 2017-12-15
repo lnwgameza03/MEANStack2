@@ -1,14 +1,15 @@
   <div class="container-fluid">
       <h2>กระทู้ล่าสุด</h2>
-      <div class="card">
-        <div class="card w-75" *ngFor="let user of users">
-          <div class="card-block">
-            <h3 class="card-title" >{{user.userName }}</h3>
-            <!-- <h3 class="card-title" >{{user.DOB}}</h3> -->
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">อ่านเพิ่มเติม..</a>
+          <div class="card" routerLink="../topic" *ngFor="let post of post1">
+            <!-- *ngFor="let post of post" -->
+            <div class="card-block">
+              <h3 class="card-title">{{post.topic }}</h3>
+              <p class="card-text">{{ post.username }}</p>
+              <p class="card-text">{{ post.category }}</p>
+              <!-- {{user.userName }} -->
+              <!-- {{psot.date }} -->
+              <!-- {{post.time }} -->
+            </div>
           </div>
-        </div> 
-      </div>
     </div>
  
