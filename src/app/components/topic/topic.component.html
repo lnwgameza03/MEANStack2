@@ -1,26 +1,37 @@
 <div class="container-fluid">
   <div class="card">
-    <div class="card w-75">
-      <div class="card-block">
-        <h3 class="card-title">topic name</h3><!-- {{topic.name }} -->
-        <p class="card-text">topic content</p><!-- {{topic.content }} -->
-        <small>topic detail</small><!-- {{user.userName }} --><!-- {{topic.date }} --><!-- {{topic.time }} -->
-      </div>
+
+    <div class="card-block">
+      <h3 class="card-title">topic title</h3>
+      <!-- {{topic.name }} -->
+      <p class="card-text">topic content</p>
+      <!-- {{topic.content }} -->
+      <small>topic detail</small>
+      <!-- {{user.userName }} -->
+      <!-- {{post.date }} -->
+      <!-- {{post.time }} -->
     </div>
+
   </div>
 
   <div class="card">
-    <div class="card w-75"><!-- *ngFor="let comment of comment" -->
-      <div class="card-block">
-        <p class="card-text">comment content</p><!-- {{comment.content }} -->
-        <small>comment detail</small><!-- {{user.userName }} --><!-- {{comment.date }} --><!-- {{comment.time }} -->
-      </div>
+    <!-- *ngFor="let comment of comment" -->
+
+    <div class="card-block">
+      <p class="card-text">comment content</p>
+      <!-- {{comment.content }} -->
+      <small>comment detail</small>
+      <!-- {{user.userName }} -->
+      <!-- {{comment.date }} -->
+      <!-- {{comment.time }} -->
     </div>
+
   </div>
 
   <div class="form-group">
     <label for="comment">แสดงความคิดเห็น</label>
-    <textarea class="form-control" rows="5" id="comment"></textarea><!-- [(ngModel)]="comment.content" -->
+    <textarea class="form-control" rows="5" id="comment"></textarea>
+    <!-- [(ngModel)]="comment.content" -->
   </div>
   <div class="text-center">
     <button type="button" class="btn btn-outline-primary" (click)="comment()">ส่งข้อความ</button>
