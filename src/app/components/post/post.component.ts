@@ -16,10 +16,11 @@ export class PostComponent implements OnInit {
   constructor(private userService:UserService) { }
 
   ngOnInit() {
+    this.post1.category = "a"
   }
 
   post(){
-    
+    console.log(this.post1)
     this.userService.CreatePost(this.post1).subscribe(post => (null))
   }
 

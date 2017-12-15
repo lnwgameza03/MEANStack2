@@ -20,7 +20,18 @@ export class LoginComponent implements OnInit {
   
 
   login() {
-    this.loginService.login((<HTMLTextAreaElement>document.getElementById('usr')).value)
-    this.userService.Create(this.user).subscribe(user => (null))
+    this.userService.checkUser(this.user.userName , this.user.password).subscribe(user => {
+    console.log("pass")
+    console.log(user)
+    if(user.length === 0){
+      console.log("not match")
+      alert('login fail')
+    }else {
+      alert('login success')
+      this.loginService.login(this.user.userName)
+    console.log("success")}
+  })
+  //this.loginService.login((<HTMLTextAreaElement>document.getElementById('usr')).value)
+  
   }
 }

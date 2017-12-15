@@ -1,10 +1,11 @@
 <h1>
   <div class="form-group">
     <label for="usr">หัวข้อกระทู้</label>
-    <input type="text" [(ngModel)]="post1.topic" class="form-control" id="topic">
+    <input type="text" [(ngModel)]="post1.topic" class="form-control" id="topic" name = "topic">
   </div>
   <div class="container">
   <select class="form-control" [(ngModel)]="post1.category">
+    <option class="placeholder" selected disabled value="a">เลือกประเภทกีฬา</option>
     <option>ฟุตบอล</option>
     <option>บาสเกตบอล</option>
     <option>เทเบิลเทนนิส</option>
@@ -16,7 +17,7 @@
   </div>
   <div class="form-group">
     <label for="comment">เขียนรายละเอียดของกระทู้</label>
-    <textarea [(ngModel)]="post1.content" class="form-control" rows="5" id="content"></textarea>
+    <textarea #content (change)="post1.content=content.value" class="form-control" rows="5" id="content"></textarea>   
   </div>
   <div class="text-center">
     <button type="button" class="btn btn-outline-primary" (click)="post()">ตั้งกระทู้</button>
