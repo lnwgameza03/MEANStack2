@@ -21,7 +21,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
    this.userService.getUsers().subscribe(users => this.users = users)
    //this.userService.getUser().subscribe(users => this.users = users)
-    
+
+    sessionStorage.getItem('name')
   }
  
 }

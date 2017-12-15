@@ -31,6 +31,10 @@ export class UserService {
     return this.http.get<User[]>("http://localhost:9990/users/naja")
   }
 
+  checkUser(username : String , password : String) : Observable<User[]>{
+    return this.http.post<User[]>("http://localhost:9990/users/check",{username,password})
+  }
+
   
 
 }

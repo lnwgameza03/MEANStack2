@@ -1,25 +1,28 @@
 <h1>
   <div class="form-group">
     <label for="usr">หัวข้อกระทู้</label>
-    <input type="text" [(ngModel)]="post1.topic" class="form-control" id="topic">
+    <input type="text" [(ngModel)]="post1.topic" class="form-control" id="topic" name = "topic">
   </div>
-  <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        ประเภทกีฬา
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">ฟุตบอล</a>
-        <a class="dropdown-item" href="#">บาสเกตบอล</a>
+    
+      <select class = "form-control"  [(ngModel)]="post1.category"  >
+        <option class="placeholder" selected disabled value="a">Select language</option>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
+      <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" [(ngModel)]="post1.category" >ฟุตบอล</a>
+        <a class="dropdown-item" [(ngModel)]="post1.category" >บาสเกตบอล</a>
         <a class="dropdown-item" href="#">เทเบิลเทนนิส</a>
         <a class="dropdown-item" href="#">ว่ายน้ำ</a>
         <a class="dropdown-item" href="#">กอล์ฟ</a>
         <a class="dropdown-item" href="#">วอลเลย์บอล</a>
         <a class="dropdown-item" href="#">แบดมินตัน</a>
-      </div>
-    </div>
+      </div> -->
   <div class="form-group">
     <label for="comment">เขียนรายละเอียดของกระทู้</label>
-    <textarea [(ngModel)]="post1.content" class="form-control" rows="5" id="content"></textarea>
+    <textarea #content (change)="post1.content=content.value" class="form-control" rows="5" id="content"></textarea>   
   </div>
   <div class="text-center">
     <button type="button" class="btn btn-outline-primary" (click)="post()">ตั้งกระทู้</button>
