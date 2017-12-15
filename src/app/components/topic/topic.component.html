@@ -1,29 +1,28 @@
 <div class="container-fluid">
   <div class="card">
-    <div class="card w-75">*ngFor="let user of users"
+    <div class="card w-75">
       <div class="card-block">
-        <h3 class="card-title">user.userName</h3>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">อ่านเพิ่มเติม..</a>
+        <h3 class="card-title">topic name</h3><!-- {{topic.name }} -->
+        <p class="card-text">topic content</p><!-- {{topic.content }} -->
+        <small>topic detail</small><!-- {{user.userName }} --><!-- {{topic.date }} --><!-- {{topic.time }} -->
       </div>
     </div>
   </div>
 
   <div class="card">
-    <div class="card w-75">*ngFor="let user of users"
+    <div class="card w-75"><!-- *ngFor="let comment of comment" -->
       <div class="card-block">
-        <h3 class="card-title">user.userName</h3>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">อ่านเพิ่มเติม..</a>
+        <p class="card-text">comment content</p><!-- {{comment.content }} -->
+        <small>comment detail</small><!-- {{user.userName }} --><!-- {{comment.date }} --><!-- {{comment.time }} -->
       </div>
     </div>
   </div>
 
   <div class="form-group">
-    <label for="comment">เขียนรายละเอียดของกระทู้</label>
-    <textarea class="form-control" rows="5" id="comment"></textarea>
+    <label for="comment">แสดงความคิดเห็น</label>
+    <textarea class="form-control" rows="5" id="comment"></textarea><!-- [(ngModel)]="comment.content" -->
   </div>
   <div class="text-center">
-    <button type="button" class="btn btn-outline-primary" (click)="test()">ตั้งกระทู้</button>
+    <button type="button" class="btn btn-outline-primary" (click)="comment()">ส่งข้อความ</button>
   </div>
 </div>

@@ -12,7 +12,7 @@ export class TopicComponent implements OnInit {
   ngOnInit() {
   }
 
-  test(){
+  comment(){
     
   }
 

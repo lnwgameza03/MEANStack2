@@ -3,23 +3,18 @@
     <label for="usr">หัวข้อกระทู้</label>
     <input type="text" [(ngModel)]="post1.topic" class="form-control" id="topic" name = "topic">
   </div>
-    
-      <select class = "form-control"  [(ngModel)]="post1.category"  >
-        <option class="placeholder" selected disabled value="a">Select language</option>
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
-      </select>
-      <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" [(ngModel)]="post1.category" >ฟุตบอล</a>
-        <a class="dropdown-item" [(ngModel)]="post1.category" >บาสเกตบอล</a>
-        <a class="dropdown-item" href="#">เทเบิลเทนนิส</a>
-        <a class="dropdown-item" href="#">ว่ายน้ำ</a>
-        <a class="dropdown-item" href="#">กอล์ฟ</a>
-        <a class="dropdown-item" href="#">วอลเลย์บอล</a>
-        <a class="dropdown-item" href="#">แบดมินตัน</a>
-      </div> -->
+  <div class="container">
+  <select class="form-control" [(ngModel)]="post1.category">
+    <option class="placeholder" selected disabled value="a">เลือกประเภทกีฬา</option>
+    <option>ฟุตบอล</option>
+    <option>บาสเกตบอล</option>
+    <option>เทเบิลเทนนิส</option>
+    <option>ว่ายน้ำ</option>
+    <option>กอล์ฟ</option>
+    <option>วอลเลย์บอล</option>
+    <option>แบดมินตัน</option>
+  </select>
+  </div>
   <div class="form-group">
     <label for="comment">เขียนรายละเอียดของกระทู้</label>
     <textarea #content (change)="post1.content=content.value" class="form-control" rows="5" id="content"></textarea>   

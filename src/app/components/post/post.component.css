@@ -1,11 +1,12 @@
 .form-group {
-    font-size: 20px;
-    width: 1000px;
+    font-size: 1.25rem;
+    width: 60%;
     text-align: center;
     margin: auto;
 }
 
-.dropdown{
-    margin: auto;
-    text-align: center;
+.container {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 10%;
 }
