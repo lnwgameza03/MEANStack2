@@ -31,8 +31,16 @@ export class UserService {
     return this.http.get<User[]>("http://localhost:9990/users")
   }
 
+  getPostCate(cate:String) : Observable<Post[]>{
+    return this.http.get<Post[]>("http://localhost:9990/posts/"+cate)
+  }
+
+  getTopic(topic:String) : Observable<Post[]>{
+    return this.http.get<Post[]>("http://localhost:9990/posts/"+topic)
+  }
+
   getUser() : Observable<User[]>{
-    return this.http.get<User[]>("http://localhost:9990/users/naja")
+    return this.http.get<User[]>("http://localhost:9990/post/pul")
   }
 
   checkUser(username : String , password : String) : Observable<User[]>{

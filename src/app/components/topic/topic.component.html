@@ -1,12 +1,12 @@
 <div class="container-fluid">
-  <div class="card">
+  <div class="card" *ngFor="let post of post1">
 
     <div class="card-block">
-      <h3 class="card-title">topic title</h3>
+      <h3 class="card-title">{{post.topic}}</h3>
       <!-- {{topic.name }} -->
-      <p class="card-text">topic content</p>
+      <p class="card-text">{{post.content}}</p>
       <!-- {{topic.content }} -->
-      <small>topic detail</small>
+      <small>{{post.userName}}</small>
       <!-- {{user.userName }} -->
       <!-- {{post.date }} -->
       <!-- {{post.time }} -->

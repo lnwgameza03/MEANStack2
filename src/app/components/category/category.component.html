@@ -65,11 +65,11 @@
 </div> -->
 
 <div class="container-fluid">
-<div class="wrapper">
-  <div class="news-item hero-item">
-    <div class="thumbnail">
-        <div class="image-wrapper" routerLink="../selected">
-           <picture>
+  <div class="wrapper">
+    <div class="news-item hero-item">
+      <div class="thumbnail">
+        <div class="image-wrapper" (click)="select('soccer')" routerLink="../selected">
+          <picture>
             <!--[if IE 9]><video style="display: none;"><![endif]-->
             <source media="(max-width: 1000px)" srcset="https://i.eurosport.com/2017/08/04/2139176-44740937-1600-900.jpg">
             <source media="(min-width: 1100px)" srcset="https://i.eurosport.com/2017/08/04/2139176-44740937-1600-900.jpg">
@@ -78,132 +78,136 @@
           </picture>
         </div>
         <div class="caption">
-          <button type="button" class="btn btn-danger" routerLink="../selected">ฟุตบอล</button>
+          <button type="button" class="btn btn-danger">ฟุตบอล</button>
           <h1 class="title">รวมกระทู้ข้อมูลข่าวสารฟุตบอล</h1>
           <span class="author">by Ad-Arm</span>
-        </div> 
-    </div>
-  </div>
-  <div class="news-item standard-item">
-    <div class="thumbnail">
-      <div class="image-wrapper" routerLink="../selected">
-        <picture>
-          <!--[if IE 9]><video style="display: none;"><![endif]-->
-          <source media="(max-width: 599px)" srcset="https://media4.s-nbcnews.com/j/newscms/2015_15/600466/140804-tiger_woods-arkin1-1536_98048252712d2cc5b0d48e5acc95874a.nbcnews-ux-2880-1000.jpg">
-          <source media="(min-width: 600px)" srcset="https://media4.s-nbcnews.com/j/newscms/2015_15/600466/140804-tiger_woods-arkin1-1536_98048252712d2cc5b0d48e5acc95874a.nbcnews-ux-2880-1000.jpg">
-          <!--[if IE 9]></video><![endif]-->
-          <img src="https://media4.s-nbcnews.com/j/newscms/2015_15/600466/140804-tiger_woods-arkin1-1536_98048252712d2cc5b0d48e5acc95874a.nbcnews-ux-2880-1000.jpg" alt="Resident Evil 7" class="responsive-img">
-        </picture>
+        </div>
       </div>
-      <div class="caption">
-          <button type="button" class="btn btn-danger" routerLink="../selected">กอล์ฟ</button>
-        <h1 class="title">รวมกระทู้ข้อมูลข่าวสารกอล์ฟ</h1>
-        <span class="author">by Ad-Arm</span>
-      </div> 
     </div>
-  </div>
-  <div class="news-item standard-item">
-    <div class="thumbnail">
-      <div class="image-wrapper" routerLink="../selected">
-        <picture>
-          <!--[if IE 9]><video style="display: none;"><![endif]-->
-          <source media="(max-width: 599px)" srcset="http://media.komchadluek.net/img/size1/2017/06/13/L_bbabaakh8a8a5b867bekb.jpg">
-          <source media="(min-width: 600px)" srcset="http://media.komchadluek.net/img/size1/2017/06/13/L_bbabaakh8a8a5b867bekb.jpg">
-          <!--[if IE 9]></video><![endif]-->
-          <img src="http://media.komchadluek.net/img/size1/2017/06/13/L_bbabaakh8a8a5b867bekb.jpg" alt="Bioshock 2" class="responsive-img">
-        </picture>
+    <div class="news-item standard-item">
+      <div class="thumbnail">
+        <div class="image-wrapper" (click)="select('golf')" routerLink="../selected">
+          <picture>
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source media="(max-width: 599px)" srcset="https://media4.s-nbcnews.com/j/newscms/2015_15/600466/140804-tiger_woods-arkin1-1536_98048252712d2cc5b0d48e5acc95874a.nbcnews-ux-2880-1000.jpg">
+            <source media="(min-width: 600px)" srcset="https://media4.s-nbcnews.com/j/newscms/2015_15/600466/140804-tiger_woods-arkin1-1536_98048252712d2cc5b0d48e5acc95874a.nbcnews-ux-2880-1000.jpg">
+            <!--[if IE 9]></video><![endif]-->
+            <img src="https://media4.s-nbcnews.com/j/newscms/2015_15/600466/140804-tiger_woods-arkin1-1536_98048252712d2cc5b0d48e5acc95874a.nbcnews-ux-2880-1000.jpg"
+              alt="Resident Evil 7" class="responsive-img">
+          </picture>
+        </div>
+        <div class="caption">
+          <button type="button" class="btn btn-danger">กอล์ฟ</button>
+          <h1 class="title">รวมกระทู้ข้อมูลข่าวสารกอล์ฟ</h1>
+          <span class="author">by Ad-Arm</span>
+        </div>
       </div>
-      <div class="caption">
-        <button type="button" class="btn btn-danger" routerLink="../selected">แบดมินตัน</button>
-        <h1 class="title">รวมกระทู้ข้อมูลข่าวสารแบดมินตัน</h1>
-        <span class="author">by Ad-Arm</span>
-      </div> 
     </div>
-  </div>
-  <div class="news-item standard-item">
-    <div class="thumbnail">
-      <div class="image-wrapper" routerLink="../selected">
-        <picture>
-          <!--[if IE 9]><video style="display: none;"><![endif]-->
-          <source media="(max-width: 1000px)" srcset="https://wtop.com/wp-content/uploads/2015/12/Trail-Blazers-Clippers-Basketball.jpeg">
-          <source media="(min-width: 1100px)" srcset="https://wtop.com/wp-content/uploads/2015/12/Trail-Blazers-Clippers-Basketball.jpeg">
-          <!--[if IE 9]></video><![endif]-->
-          <img src="https://wtop.com/wp-content/uploads/2015/12/Trail-Blazers-Clippers-Basketball.jpeg" alt="Tomb Raider" class="responsive-img">
-        </picture>
+    <div class="news-item standard-item">
+      <div class="thumbnail">
+        <div class="image-wrapper" (click)="select('badminton')" routerLink="../selected">
+          <picture>
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source media="(max-width: 599px)" srcset="http://media.komchadluek.net/img/size1/2017/06/13/L_bbabaakh8a8a5b867bekb.jpg">
+            <source media="(min-width: 600px)" srcset="http://media.komchadluek.net/img/size1/2017/06/13/L_bbabaakh8a8a5b867bekb.jpg">
+            <!--[if IE 9]></video><![endif]-->
+            <img src="http://media.komchadluek.net/img/size1/2017/06/13/L_bbabaakh8a8a5b867bekb.jpg" alt="Bioshock 2" class="responsive-img">
+          </picture>
+        </div>
+        <div class="caption">
+          <button type="button" class="btn btn-danger">แบดมินตัน</button>
+          <h1 class="title">รวมกระทู้ข้อมูลข่าวสารแบดมินตัน</h1>
+          <span class="author">by Ad-Arm</span>
+        </div>
       </div>
-      <div class="caption">
-          <button type="button" class="btn btn-danger" routerLink="../selected">บาสเกตบอล</button>
-        <h1 class="title">รวมกระทู้ข้อมูลข่าวสารบาสเกตบอล</h1>
-        <span class="author">by Ad-Arm</span>
-      </div> 
     </div>
-  </div>
-  <div class="news-item standard-item">
-    <div class="thumbnail">
-      <div class="image-wrapper" routerLink="../selected">
-        <picture>
-          <!--[if IE 9]><video style="display: none;"><![endif]-->
-          <source media="(max-width: 1000px)" srcset="http://my-thai.org/wp-content/uploads/thailand-1.jpg">
-          <source media="(min-width: 1100px)" srcset="http://my-thai.org/wp-content/uploads/thailand-1.jpg">
-          <!--[if IE 9]></video><![endif]-->
-          <img src="http://my-thai.org/wp-content/uploads/thailand-1.jpg  " alt="Dishonored 2" class="responsive-img">
-        </picture>
+    <div class="news-item standard-item">
+      <div class="thumbnail">
+        <div class="image-wrapper" (click)="select('basketball')" routerLink="../selected">
+          <picture>
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source media="(max-width: 1000px)" srcset="https://wtop.com/wp-content/uploads/2015/12/Trail-Blazers-Clippers-Basketball.jpeg">
+            <source media="(min-width: 1100px)" srcset="https://wtop.com/wp-content/uploads/2015/12/Trail-Blazers-Clippers-Basketball.jpeg">
+            <!--[if IE 9]></video><![endif]-->
+            <img src="https://wtop.com/wp-content/uploads/2015/12/Trail-Blazers-Clippers-Basketball.jpeg" alt="Tomb Raider" class="responsive-img">
+          </picture>
+        </div>
+        <div class="caption">
+          <button type="button" class="btn btn-danger">บาสเกตบอล</button>
+          <h1 class="title">รวมกระทู้ข้อมูลข่าวสารบาสเกตบอล</h1>
+          <span class="author">by Ad-Arm</span>
+        </div>
       </div>
-      <div class="caption">
-          <button type="button" class="btn btn-danger" routerLink="../selected">วอลเลย์บอล</button>
-        <h1 class="title">รวมกระทู้ข้อมูลข่าวสารวอลเลย์บอล</h1>
-        <span class="author">by Ad-Arm</span>
-      </div> 
     </div>
-  </div>
-  <div class="news-item standard-item">
-    <div class="thumbnail">
-      <div class="image-wrapper" routerLink="../selected">
-        <img src="https://www.gannett-cdn.com/-mm-/2b4bff6e7a097c3f9560371590ab3402ddbadda9/c=0-315-5096-3194&r=x803&c=1600x800/local/-/media/2017/08/06/USATODAY/USATODAY/636376443136502293-USATSI-9443247.jpg" alt="Bioshock Infinite" class="responsive-img">
+    <div class="news-item standard-item">
+      <div class="thumbnail">
+        <div class="image-wrapper" (click)="select('volleyball')" routerLink="../selected">
+          <picture>
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source media="(max-width: 1000px)" srcset="http://my-thai.org/wp-content/uploads/thailand-1.jpg">
+            <source media="(min-width: 1100px)" srcset="http://my-thai.org/wp-content/uploads/thailand-1.jpg">
+            <!--[if IE 9]></video><![endif]-->
+            <img src="http://my-thai.org/wp-content/uploads/thailand-1.jpg  " alt="Dishonored 2" class="responsive-img">
+          </picture>
+        </div>
+        <div class="caption">
+          <button type="button" class="btn btn-danger">วอลเลย์บอล</button>
+          <h1 class="title">รวมกระทู้ข้อมูลข่าวสารวอลเลย์บอล</h1>
+          <span class="author">by Ad-Arm</span>
+        </div>
       </div>
-      <div class="caption">
-          <button type="button" class="btn btn-danger" routerLink="../selected">ว่ายน้ำ</button>
-        <h1 class="title">รวมกระทู้ข้อมูลข่าวสารว่ายน้ำ</h1>
-        <span class="author">by Ad-Arm</span>
-      </div> 
     </div>
-  </div>
-  <div class="news-item standard-item">
-    <div class="thumbnail">
-      <div class="image-wrapper" routerLink="../selected">
-        <picture>
-          <!--[if IE 9]><video style="display: none;"><![endif]-->
-          <source media="(max-width: 599px)" srcset="http://static1.businessinsider.com/image/57b63582ce38f233008b7ac9-1190-625/why-china-is-so-staggeringly-good-at-table-tennis.jpg">
-          <source media="(min-width: 600px)" srcset="http://static1.businessinsider.com/image/57b63582ce38f233008b7ac9-1190-625/why-china-is-so-staggeringly-good-at-table-tennis.jpg">
-          <!--[if IE 9]></video><![endif]-->
-          <img src="http://static1.businessinsider.com/image/57b63582ce38f233008b7ac9-1190-625/why-china-is-so-staggeringly-good-at-table-tennis.jpg" alt="Trine 2" class="responsive-img">
-        </picture>
+    <div class="news-item standard-item">
+      <div class="thumbnail">
+        <div class="image-wrapper" (click)="select('swim')" routerLink="../selected">
+          <img src="https://www.gannett-cdn.com/-mm-/2b4bff6e7a097c3f9560371590ab3402ddbadda9/c=0-315-5096-3194&r=x803&c=1600x800/local/-/media/2017/08/06/USATODAY/USATODAY/636376443136502293-USATSI-9443247.jpg"
+            alt="Bioshock Infinite" class="responsive-img">
+        </div>
+        <div class="caption">
+          <button type="button" class="btn btn-danger">ว่ายน้ำ</button>
+          <h1 class="title">รวมกระทู้ข้อมูลข่าวสารว่ายน้ำ</h1>
+          <span class="author">by Ad-Arm</span>
+        </div>
       </div>
-      <div class="caption">
+    </div>
+    <div class="news-item standard-item">
+      <div class="thumbnail">
+        <div class="image-wrapper" (click)="select('tabletennis')" routerLink="../selected">
+          <picture>
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source media="(max-width: 599px)" srcset="http://static1.businessinsider.com/image/57b63582ce38f233008b7ac9-1190-625/why-china-is-so-staggeringly-good-at-table-tennis.jpg">
+            <source media="(min-width: 600px)" srcset="http://static1.businessinsider.com/image/57b63582ce38f233008b7ac9-1190-625/why-china-is-so-staggeringly-good-at-table-tennis.jpg">
+            <!--[if IE 9]></video><![endif]-->
+            <img src="http://static1.businessinsider.com/image/57b63582ce38f233008b7ac9-1190-625/why-china-is-so-staggeringly-good-at-table-tennis.jpg"
+              alt="Trine 2" class="responsive-img">
+          </picture>
+        </div>
+        <div class="caption">
           <button type="button" class="btn btn-danger" routerLink="../selected">เทเบิลเทนนิส</button>
-        <h1 class="title">รวมกระทู้ข้อมูลข่าวสารเทเบิลเทนนิส</h1>
-        <span class="author">by Ad-Arm</span>
-      </div> 
-    </div>
-  </div>
-  
-  <div class="news-item standard-item">
-    <div class="thumbnail">
-      <div class="image-wrapper" routerLink="../selected">
-        <picture>
-          <!--[if IE 9]><video style="display: none;"><![endif]-->
-          <source media="(max-width: 1000px)" srcset="http://e1.365dm.com/17/10/16-9/20/skysports-tennis-roger-federer-basel_4137189.jpg?20171024192811">
-          <source media="(min-width: 1100px)" srcset="http://e1.365dm.com/17/10/16-9/20/skysports-tennis-roger-federer-basel_4137189.jpg?20171024192811">
-          <!--[if IE 9]></video><![endif]-->
-          <img src="http://e1.365dm.com/17/10/16-9/20/skysports-tennis-roger-federer-basel_4137189.jpg?20171024192811" alt="Witcher 3: Wild Hunt" class="responsive-img">
-        </picture>
-      </div>
-      <div class="caption">
-          <button type="button" class="btn btn-danger" routerLink="../selected">เทนนิส</button>
-        <h1 class="title">รวมกระทู้ข้อมูลข่าวสารเทนนิส</h1>
-        <span class="author">by Ad-Arm</span>
+          <h1 class="title">รวมกระทู้ข้อมูลข่าวสารเทเบิลเทนนิส</h1>
+          <span class="author">by Ad-Arm</span>
+        </div>
       </div>
     </div>
+
+    <div class="news-item standard-item">
+      <div class="thumbnail">
+        <div class="image-wrapper" (click)="select('tennis')" routerLink="../selected">
+          <picture>
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source media="(max-width: 1000px)" srcset="http://e1.365dm.com/17/10/16-9/20/skysports-tennis-roger-federer-basel_4137189.jpg?20171024192811">
+            <source media="(min-width: 1100px)" srcset="http://e1.365dm.com/17/10/16-9/20/skysports-tennis-roger-federer-basel_4137189.jpg?20171024192811">
+            <!--[if IE 9]></video><![endif]-->
+            <img src="http://e1.365dm.com/17/10/16-9/20/skysports-tennis-roger-federer-basel_4137189.jpg?20171024192811" alt="Witcher 3: Wild Hunt"
+              class="responsive-img">
+          </picture>
+        </div>
+        <div class="caption">
+          <button type="button" class="btn btn-danger">เทนนิส</button>
+          <h1 class="title">รวมกระทู้ข้อมูลข่าวสารเทนนิส</h1>
+          <span class="author">by Ad-Arm</span>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
 </div>

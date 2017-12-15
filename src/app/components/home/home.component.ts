@@ -4,7 +4,6 @@ import { UserService } from '../../services/user.service';
 import { User } from '../../models/user.model';
 import { Post } from '../../models/post.models';
 
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -28,5 +27,9 @@ export class HomeComponent implements OnInit {
 
     //sessionStorage.getItem('name')
   }
+  topic(name) {
+    sessionStorage.setItem("topic", name)
+  }
+  
  
 }
