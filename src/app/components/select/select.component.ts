@@ -18,4 +18,7 @@ export class SelectComponent implements OnInit {
     this.userService.getPostCate(sessionStorage.getItem("cate")).subscribe(post => this.post1 = post)
   }
 
+  topic(name) {
+    sessionStorage.setItem("topic", name)
+  }
 }
