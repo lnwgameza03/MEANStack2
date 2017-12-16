@@ -17,7 +17,7 @@ export class PostComponent implements OnInit {
   constructor(private userService:UserService, private router:Router) { }
 
   ngOnInit() {
-    this.post1.category = "a"
+    this.post1.category = "other"
   }
 
   post(){

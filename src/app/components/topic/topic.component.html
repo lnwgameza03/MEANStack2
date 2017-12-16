@@ -14,7 +14,7 @@
     </div>
 
   </div>
-
+----ความคิดเห็น----
   <div class="card" *ngFor="let reply of reply2" >
     <!-- *ngFor="let reply of reply1" -->
 
@@ -22,7 +22,7 @@
       <p class="card-text">ตอบกลับ : {{ reply.replie }} </p>
       <!-- {{comment.content }} -->
       <small>ตอบกลับโดย : {{ reply.username }}</small>
-      <button *ngIf="admin()" (click)="del(reply._id)">del</button>
+      <button class="close"  aria-label="Close" *ngIf="admin()" (click)="del(reply._id)" >&times;</button>
       <!-- {{user.userName }} -->
       <!-- {{comment.date }} -->
       <!-- {{comment.time }} -->
