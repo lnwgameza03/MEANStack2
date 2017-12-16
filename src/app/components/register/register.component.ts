@@ -52,11 +52,11 @@ export class RegisterComponent implements OnInit {
       return;
     }
    
-    
+    this.user.status = 1
     this.userService.Create(this.user).subscribe(user => {  
       
             // this.flashMessagesService.show('Register is Success!', {classes: ['alert', 'alert-success'], timeout: 3000}); 
-            this.router.navigate(['../login'])
+            this.router.navigate(['./login'])
             
           }, err => {
             this.err.push(`This email already exists`);
