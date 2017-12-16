@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 import { UserService } from '../../services/user.service';
 import { User } from '../../models/user.model';
-import { Router } from '@angular/router';
-
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -13,8 +12,8 @@ import { Router } from '@angular/router';
 export class RegisterComponent implements OnInit {
 
   user = new User()
-  err: string[] = [];
-  constructor(private userService:UserService,private router: Router) { }
+  err : string[] = [];
+  constructor(private userService:UserService,private router:Router) { }
 
   ngOnInit() {
     this.user = new User();
@@ -22,13 +21,16 @@ export class RegisterComponent implements OnInit {
 
   saveRegist(){
     this.err = [];
-
     if(!this.user.email){
       this.err.push("กรุณากรอกอีเมล")
       return;
     }
     if(!this.user.password){
       this.err.push("กรุณากรอกรหัสผ่าน")
+      return;
+    }
+    if(!this.user.userName){
+      this.err.push("กรุณากรอกชื่อผู้ใช้")
       return;
     }
     if(!this.user.firstName){
@@ -39,12 +41,8 @@ export class RegisterComponent implements OnInit {
       this.err.push("กรุณากรอกนามสกุล")
       return;
     }
-    if(!this.user.userName){
-      this.err.push("กรุณากรอกชื่อผู้ใช้")
-      return;
-    }
     if(!this.user.DOB){
-      this.err.push("กรุณากรอก วัน/เดือน/ปี เกิด")
+      this.err.push("กรุณากรอกวันเดือนปีเกิด")
       return;
     }
     if(!this.user.phone){
@@ -69,7 +67,7 @@ export class RegisterComponent implements OnInit {
     // this.user.DOB = ((<HTMLTextAreaElement>document.getElementById('date')).value)
     // this.user.phone = ((<HTMLTextAreaElement>document.getElementById('phone')).value)
     //this.user.email = ((<HTMLTextAreaElement>document.getElementById('email')).value)
-   
+    
   }
 
 }

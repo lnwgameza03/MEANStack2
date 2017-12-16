@@ -2,12 +2,12 @@
   <div class="card" *ngFor="let post of post1">
 
     <div class="card-block">
-      <h3 class="card-title">{{post.topic}}</h3>
+      <h3 class="card-title">หัวข้อ : {{post.topic}}</h3>
       <!-- {{topic.name }} -->
-      <p class="card-text">{{post.content}}</p>
+      <p class="card-text">รายละเอียด : {{post.content}}</p>
       <!-- {{topic.content }} -->
-      <small>{{post.username}}</small><br>
-      <small>{{post.category}}</small>
+      <small>โพสโดย : {{post.username}}</small><br>
+      <small>ประเภทกีฬา : {{post.category}}</small>
       <!-- {{user.userName }} -->
       <!-- {{post.date }} -->
       <!-- {{post.time }} -->
@@ -19,9 +19,9 @@
     <!-- *ngFor="let reply of reply1" -->
 
     <div class="card-block">
-      <p class="card-text">{{ reply.replie }} </p>
+      <p class="card-text">ตอบกลับ : {{ reply.replie }} </p>
       <!-- {{comment.content }} -->
-      <small>{{ reply.username }}</small>
+      <small>ตอบกลับโดย : {{ reply.username }}</small>
       <button *ngIf="admin()" (click)="del(reply._id)">del</button>
       <!-- {{user.userName }} -->
       <!-- {{comment.date }} -->

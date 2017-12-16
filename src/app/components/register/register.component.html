@@ -2,18 +2,18 @@
     <h1>สมัครสมาชิก</h1>
 
     <div class="row justify-content-md-center">
-      <div class="col-md-6 mb-3">
-        <div class="alert alert-danger" role="alert" *ngIf="err.length > 0">
-          <strong>Error</strong> {{err}}
+        <div class="col-md-6 mb-3">
+          <div class="alert alert-danger" role="alert" *ngIf="err.length > 0">
+            <strong>ผิดพลาด</strong> {{err}}
+          </div>
         </div>
       </div>
-    </div>
 
     <div class="row">
       <div class="form-group col-md-6">
         <label for="usr">ชื่อผู้ใช้:</label>
         <input type="text" [(ngModel)]="user.userName" class="form-control" id="usr" required>
-      
+        
       </div>
       <div class="form-group col-md-6">
         <label for="pwd">รหัสผ่าน:</label>
@@ -40,7 +40,7 @@
       <div class="form-group col-md-6">
         <label for="pwd">วันเดือนปีเกิด:</label>
         <input type="date" [(ngModel)]="user.DOB" class="form-control" id="date" required>
-        
+       
       </div>
       <div class="form-group col-md-6">
         <label for="pwd">เบอร์โทรศัพท์:</label>
@@ -56,5 +56,5 @@
         
       </div>
     </div>
-    <button type="button" class="btn btn-default" (click)="saveRegist()" >สมัครสมาชิก</button>
+    <button type="submit" class="btn btn-primary" (click)="saveRegist()" >สมัครสมาชิก</button>
   </div>
