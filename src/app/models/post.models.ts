@@ -1,5 +1,5 @@
 export class Post{ 
-topic: String ;
+topic: string ;
 content: String;
 category: String;
 username: String

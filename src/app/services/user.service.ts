@@ -43,6 +43,14 @@ export class UserService {
     return this.http.get<Post[]>("http://localhost:9990/posts/topic/"+topic)
   }
 
+  getReply(topic:String) : Observable<Reply[]>{
+    return this.http.get<Reply[]>("http://localhost:9990/replies/"+topic)
+  }
+
+  delete(id:String) : Observable<Reply>{
+    return this.http.get<Reply>("http://localhost:9990/replies/delete/"+id)
+  }
+
   getUser() : Observable<User[]>{
     return this.http.get<User[]>("http://localhost:9990/post/pul")
   }

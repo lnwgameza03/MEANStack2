@@ -6,7 +6,8 @@
       <!-- {{topic.name }} -->
       <p class="card-text">{{post.content}}</p>
       <!-- {{topic.content }} -->
-      <small>{{post.userName}}</small>
+      <small>{{post.username}}</small><br>
+      <small>{{post.category}}</small>
       <!-- {{user.userName }} -->
       <!-- {{post.date }} -->
       <!-- {{post.time }} -->
@@ -14,13 +15,14 @@
 
   </div>
 
-  <div class="card" >
+  <div class="card" *ngFor="let reply of reply2" >
     <!-- *ngFor="let reply of reply1" -->
 
     <div class="card-block">
-      <p class="card-text">reply.replie </p>
+      <p class="card-text">{{ reply.replie }} </p>
       <!-- {{comment.content }} -->
-      <!-- <small>{{ user.userName }}</small> -->
+      <small>{{ reply.username }}</small>
+      <button *ngIf="admin()" (click)="del(reply._id)">del</button>
       <!-- {{user.userName }} -->
       <!-- {{comment.date }} -->
       <!-- {{comment.time }} -->
