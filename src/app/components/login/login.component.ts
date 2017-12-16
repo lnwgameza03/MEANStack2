@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
     this.userService.checkUser(this.user.userName , this.user.password).subscribe(user => {
     console.log("pass")
     console.log(user)
+    sessionStorage.setItem("status", user[0].status.toString())
     if(user.length === 0){
       console.log("not match")
       alert('login fail')
@@ -30,6 +31,7 @@ export class LoginComponent implements OnInit {
       alert('login success')
       this.loginService.login(this.user.userName)
     console.log("success")}
+    
   })
   //this.loginService.login((<HTMLTextAreaElement>document.getElementById('usr')).value)
   
