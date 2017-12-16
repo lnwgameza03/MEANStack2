@@ -4,7 +4,7 @@
     <div class="row justify-content-md-center">
         <div class="col-md-6 mb-3">
           <div class="alert alert-danger" role="alert" *ngIf="err.length > 0">
-            <strong>Error</strong> {{err}}
+            <strong>ผิดพลาด</strong> {{err}}
           </div>
         </div>
       </div>
@@ -13,12 +13,12 @@
       <div class="form-group col-md-6">
         <label for="usr">ชื่อผู้ใช้:</label>
         <input type="text" [(ngModel)]="user.userName" class="form-control" id="usr" required>
-        <div class="invalid-feedback">กรุณากรอกชื่อผู้ใช้</div>
+        
       </div>
       <div class="form-group col-md-6">
         <label for="pwd">รหัสผ่าน:</label>
         <input type="password" [(ngModel)]="user.password" class="form-control" id="pwd" required>
-        <div class="invalid-feedback">กรุณากรอกรหัสผ่าน</div>
+        
       </div>
     </div>
     
@@ -27,12 +27,12 @@
       <div class="form-group col-md-6">
         <label for="pwd">ชื่อ:</label>
         <input type="text" [(ngModel)]="user.firstName" class="form-control" id="fn" required>
-        <div class="invalid-feedback">กรุณากรอกชื่อ</div>
+        
       </div>
       <div class="form-group col-md-6">
         <label for="pwd">นามสกุล:</label>
         <input type="text" [(ngModel)]="user.lastName" class="form-control" id="ln" required>
-        <div class="invalid-feedback">กรุณากรอกนามสกุล</div>
+        
       </div>
     </div>
 
@@ -40,12 +40,12 @@
       <div class="form-group col-md-6">
         <label for="pwd">วันเดือนปีเกิด:</label>
         <input type="date" [(ngModel)]="user.DOB" class="form-control" id="date" required>
-        <div class="invalid-feedback">กรุณากรอกวันเดือนปีเกิด</div>
+       
       </div>
       <div class="form-group col-md-6">
         <label for="pwd">เบอร์โทรศัพท์:</label>
         <input type="number" [(ngModel)]="user.phone" class="form-control" id="phone" required>
-        <div class="invalid-feedback">กรุณากรอกเบอร์โทรศัพท์</div>
+        
       </div>
     </div>
 
@@ -53,7 +53,7 @@
       <div class="form-group col-md-6">
         <label for="pwd">อีเมล:</label>
         <input type="email" [(ngModel)]="user.email" class="form-control" id="email" required>
-        <div class="invalid-feedback">กรุณากรอกอีเมล</div>
+        
       </div>
     </div>
     <button type="submit" class="btn btn-primary" (click)="saveRegist()" >สมัครสมาชิก</button>
